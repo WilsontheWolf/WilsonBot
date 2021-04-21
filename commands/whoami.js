@@ -15,7 +15,7 @@ module.exports = {
             .addField('Joined Guilded:', u.joinTime.toDateString(), true)
             .addField('Last Online:', u.lastOnline.toDateString(), true)
             .setThumbnail(u.avatarURL)
-            .setDescription(u.about.bio || u.about.tagLine || 'No description');
+            .setDescription(u.about?.bio || u.about?.tagLine || 'No description');
 
         message.channel.send(embed);
     }
